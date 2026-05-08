@@ -16,6 +16,7 @@
 #include <array>
 #include <cassert>
 #include <cmath>
+#include <functional>
 #include <iomanip>
 #include <map>
 #include <vector>

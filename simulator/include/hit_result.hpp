@@ -1,6 +1,8 @@
 #ifndef WOW_SIMULATOR_HIT_RESULT_HPP
 #define WOW_SIMULATOR_HIT_RESULT_HPP
 
+#include <cstdint>
+
 enum class Hit_result:uint8_t
 {
     miss = 0x1,

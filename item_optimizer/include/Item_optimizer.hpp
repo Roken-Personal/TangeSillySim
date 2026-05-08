@@ -3,6 +3,8 @@
 
 #include "Armory.hpp"
 
+#include <functional>
+
 class Item_optimizer
 {
 public:
