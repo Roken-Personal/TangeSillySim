@@ -24,15 +24,9 @@ jobs:
       - name: Build
         run: cmake --build build --config $BUILD_TYPE
 
-      # Tests are currently skipped because the simulator test suite has
-      # failing/hanging tests on GitHub Actions.
-      # Re-enable once the native tests are fixed.
+      # Tests are skipped because the current simulator test suite has
+      # failing/hanging tests in GitHub Actions.
       #
       # - name: Test
       #   working-directory: build
       #   run: ctest -C $BUILD_TYPE -V
-
-      - name: Build Emscripten assets
-        run: |
-          mkdir -p website/emscripten
-          docker run --rm -v "$PWD:/src" trzeci/emscripten /bin/bash -c "cd website/emscripten && emcmake cmake ../.. -DEMSCRIPTEN=True && emmake make"
